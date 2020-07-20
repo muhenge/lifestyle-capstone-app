@@ -15,7 +15,7 @@
           <% @articles.each do |article| %>
             <div class="card small">
               <div class="card-image">
-                <%= image_tag(article.image) %>
+                <%=article.image %>
                 <span class="card-title"><%= article.title.capitalize %></span>
               </div>
               <div class="card-content">
