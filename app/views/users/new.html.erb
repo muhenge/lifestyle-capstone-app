@@ -1,0 +1,25 @@
+
+<div class="row">
+  <div class="col s12 m6 l8">
+    intro
+  </div>
+  <div class="col s12 m6 l4">
+    <% if @user.errors.any? %>
+      <div>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <h3><%= @user.username%></h3>
+    <%= form_for @user do |p| %>
+      <div class="input-field col s6">
+        <%= p.text_field :username, placeholder:"Enter a username", class:'validate'%><br><br>
+        <%= p.label :username %>
+        <%= p.submit class:'waves-effect waves-light btn'%>
+    <% end %>
+  </div>
+  </div>
+</div>
