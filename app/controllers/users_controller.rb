@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       flash.notice = 'User created'
       session[:auth] = @user
-      redirect_to articles_path
+      redirect_to new_session_path
     else
       flash.notice = 'User not created'
       render 'new'
