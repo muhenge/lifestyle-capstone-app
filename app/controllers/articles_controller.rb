@@ -1,9 +1,11 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
-  before_action :set_article,  only: [:show, :edit, :update, :destroy, :vote]
+  before_action :set_article, only: [:show, :edit, :update, :destroy, :vote]
   before_action :current_user
+
   def index
     @articles = Article.all.ordered_by_most_recent
+      #@articles_for_author = Article.article_by_author
   end
 
   def show
@@ -22,8 +24,8 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.authorid = current_user.id
-    if @article.save
+    @article.author = current_user
+    if current_user && @article.save
       redirect_to articles_path
     else
       render 'new'

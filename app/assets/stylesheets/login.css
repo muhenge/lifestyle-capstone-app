@@ -1,0 +1,13 @@
+.forms {
+    margin-top: 100px;
+    padding: 75px 155px;
+}
+
+input {
+    text-align: center;
+    border-bottom: #fa6000;
+}
+
+button {
+    background-color: #fa6000;
+}

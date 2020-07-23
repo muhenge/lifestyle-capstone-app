@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    include UsersHelper
     before_action :current_user, except: %i[new create]
   def new
     @user = User.new
@@ -17,7 +18,5 @@ class UsersController < ApplicationController
   end
   private
 
-  def user_params
-    params.require(:user).permit(:username)
-  end
+  
 end
