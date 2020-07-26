@@ -1,6 +1,6 @@
 module ArticlesHelper
     def article_params
-        params.require(:article).permit(:title, :text, :image)
+        params.require(:article).permit(:title, :text, :image, :category_id)
     end
     def set_article
         @article = Article.find(params[:id])
