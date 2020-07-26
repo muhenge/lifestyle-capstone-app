@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all.ordered_by_most_recent
+    @categories = Category.order_by_priority
       #@articles_for_author = Article.article_by_author
   end
 
@@ -18,14 +19,16 @@ class ArticlesController < ApplicationController
     @article.update(article_params)
     redirect_to articles_path
   end
+
   def new
     @article = Article.new
+    @cat_all = Category.all
   end
 
   def create
     @article = Article.new(article_params)
-    @article.author = current_user
-    if current_user && @article.save
+    @article.authorid = current_user.id
+    if @article.save
       redirect_to articles_path
     else
       render 'new'

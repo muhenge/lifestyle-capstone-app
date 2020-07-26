@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   delete 'sessions/logout', to: 'sessions#destroy', as: :destroy_session
   resources :users, only:[:new, :create, :show]
   resources :articles
+  resources :categories
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

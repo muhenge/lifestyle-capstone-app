@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="center-align">
+      <% @categories.each do |cat| %>
+        <div class="col s6 m6 l6">
+          <h4><%= cat.name.capitalize %></h4>
+        </div>
+        <div class="col s6 m6 l6">
+          <h4><%= cat.priority %></h4>
+        </div>
+      <%end %>
+    </div>
+  </div>
+</div>
