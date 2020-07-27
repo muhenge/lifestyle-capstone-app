@@ -23,12 +23,12 @@
 </div>
 </div>
   <div class="row">
-    <% @articles.each do |article| %>
+    <% @categories.each do |cat| %>
 
       <div class="col s12 m6 l3">
-        <div class="card small" style="background-image: url('<%= rails_blob_url(article.image) if article.image.attached? %>');">
+        <div class="card small">
           <div class="card-content white-text">
-            <span class="card-title"><%= link_to   %></span>
+            <span class="card-title"><%= link_to cat.name, category_path(category)  %></span>
           </div>
           <div class="card-action">
             <a href="#">This is a link</a>
