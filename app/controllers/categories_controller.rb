@@ -1,27 +1,28 @@
 class CategoriesController < ApplicationController
   include CategoriesHelper
-  before_action :set_category, only: [:show, :edit, :update, :destroy, :vote]
-  #before_action :current_user
+  include ArticlesHelper
+  before_action :set_category, only: %i[show edit update destroy vote]
+  # before_action :current_user
 
   def index
-    @categories = Category.all
-    #@articles_for_author = Article.article_by_author
+    @categories = Category.all.order_by_priority
+    # @articles_for_author = Article.article_by_author
   end
 
   def show
+
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
-    @category.update(categories_params)
+    @category.update(category_params)
     redirect_to categories_path
   end
 
   def new
     @category = Category.new
-      #@cat_all = Category.all
+      # @cat_all = Category.all
   end
 
   def create

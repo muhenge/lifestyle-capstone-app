@@ -3,7 +3,10 @@
     <%= form_for @category do |cat| %>
       <%= cat.text_field :name, placeholder:"Category name"%><br>
       <%= cat.number_field :priority, placeholder:"Category priority" %><br>
+      <%= cat.file_field :image, placeholder:"Add an image", class:""%><br><br>
       <%= cat.submit class:"waves-effect waves-light btn" %>
+
+
   <%end %>
   </div>
 </div>

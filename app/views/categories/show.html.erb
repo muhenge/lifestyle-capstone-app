@@ -1,1 +1,36 @@
-<%= category.name %>
+  <div class="container">
+    <div class="row">
+      <h4></h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <% @category.articles.each do |cat_art| %>
+    <div class="col s12 m3 l3">
+
+    <div class="card horizontal">
+        <div class="row">
+          <div class="col s6 m8 l8">
+            <div class="card-image">
+              <%= image_tag(cat_art.image) if cat_art.image.attached? %>
+            </div>
+          </div>
+          <div class="col s6 m2 l2">
+            <div class="card-stacked">
+              <div class="card-content">
+                <p><%= cat_art.text %></p>
+              </div>
+              <div class="card-action">
+                <%= link_to cat_art.title, article_path %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <% end %>
+  </div>
+
+

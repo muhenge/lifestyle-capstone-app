@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   include HomeHelper
-  require_relative 'articles_controller'
+  include CategoriesHelper
+  require 'articles_controller'
+  require 'categories_controller'
   def index
     @articles = Article.all
     @categories = Category.all
