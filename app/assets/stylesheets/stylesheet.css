@@ -1,3 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ffe7cb;
+    background-size: cover;
+}
+nav {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.login {
+    color: #8b8680;
+}
+
+.login:hover {
+    color: #fa6000;
+}
+
+nav a.brand-logo {
+    background-color: #fa6000;
+    color: white;
+}
+
 form {
     margin-top: 100px;
     padding: 75px 100px;
@@ -28,3 +52,37 @@ nav.navibar .nav-class {
 .login:hover {
     color: #fa6000;
 }
+
+.cat-img img {
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+}
+
+.cat-img {
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+}
+
+.carte {
+    margin: 35px 0 35px 0;
+}
+
+.title a {
+    color: #f99c00;
+    text-decoration: #f99c00;
+}
+
+strong {
+    font-weight: bolder;
+}
+
+.rows {
+    margin: -178px auto 0 auto;
+}
+
+a.btn {
+    background-color: #f99c00;
+}
+

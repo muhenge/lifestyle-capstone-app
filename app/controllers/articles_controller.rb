@@ -1,19 +1,18 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
-  before_action :set_article, only: [:show, :edit, :update, :destroy, :vote]
+
+  before_action :set_article, only: %i[show edit update destroy upvote downvote]
   before_action :current_user
 
   def index
     @articles = Article.all.ordered_by_most_recent
     @categories = Category.all
-    #@articles_for_author = Article.article_by_author
   end
 
-  def show
-  end
 
-  def edit
-  end
+  def show; end
+
+  def edit; end
 
   def update
     @article.update(article_params)
@@ -31,8 +30,8 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to articles_path
     else
-      render "new"
-      #render 'new'
+      render 'new'
+      # render 'new'
     end
   end
 
@@ -41,7 +40,14 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
-  def vote
+  def upvote
+    @article.upvote_by current_user
+    redirect_to articles_path
   end
 
+
+  def downvote
+    @article.downvote_by current_user
+    redirect_to articles_path
+  end
 end

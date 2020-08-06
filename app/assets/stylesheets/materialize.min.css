@@ -4681,7 +4681,7 @@ small {
 }
 
 .card.horizontal .card-image img {
-    border-radius: 2px 0 0 2px;
+    /* border-radius: 2px 0 0 2px; */
     max-width: 100%;
     width: auto
 }

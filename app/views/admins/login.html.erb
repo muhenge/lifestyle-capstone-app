@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="forms">
+      <%= form_for @admin, url: admins_login_path do |p| %>
+        <%= p.number_field :admin_code %><br><br>
+        <div class="row">
+            <%= p.submit "Log in", class:"waves-effect waves-light btn"%> |
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+  </div>

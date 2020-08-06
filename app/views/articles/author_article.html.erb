@@ -1,0 +1,30 @@
+<table class="striped centered responsive-table">
+  <thead>
+  <tr>
+    <th>
+      <h2>Your articles</h2>
+    </th>
+
+  </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td>
+          <div class="row">
+          <div class="col s12 m4 l4"><%= article.created_at%></div>
+          <div class="col s12 m4 l4"><h6><%= article.title.capitalize %></h6></div>
+          <div class="col s12 m4 l4">
+            <%= link_to "Read it", article_path(article), class:"btn"%>
+            <%= link_to "Delete", article_path(article), method: :delete, class:"waves-effect waves-light btn red" %>
+          </div>
+        </div>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+</div>
+
+</div>

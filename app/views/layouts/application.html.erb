@@ -5,14 +5,40 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  </head>
+    <%= stylesheet_link_tag 'stylesheet.css', 'nav.css' %>
+    <%= stylesheet_link_tag 'materialize.min.css' %>
+    <%= stylesheet_link_tag 'start.css' %>
+    <%= stylesheet_link_tag 'articles.css' %>
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+  </head>
+  <nav>
+    <div class="nav-class">
+      <a href="#" ></a>
+      <%= link_to 'LifeStyle', home_index_path, class:'brand-logo flow-text' %>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if @current_user %>
+          <li><%= link_to "Categories", home_index_path, class: 'login' %></li>
+          <li><%= link_to "All articles", articles_path, class: 'login' %></li>
+          <li><%= link_to "Add a new article", new_article_path, class: 'login' %></li>
+          <li><%= link_to 'My articles', user_articles_path(@current_user), class: 'login'%></li>
+          <li><%= link_to "Logout", destroy_session_path, data: {method: :delete}, class: 'login' %></li>
+          <li><span class="#f57c00-text flow-text badge"><%= @current_user.username.capitalize %></span></li>
+          </ul>
+          </div>
+      <%  else  %>
+        <li><%=  link_to "Login | Register", new_session_path,  class: 'login' %></li>
+        <% end %>
+
+      </ul>
+    </div>
+  </nav>
   <body>
     <%= yield %>
+
     <!--JavaScript at end of body for optimized loading-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     </body>
 </html>

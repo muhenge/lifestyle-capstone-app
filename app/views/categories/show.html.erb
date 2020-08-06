@@ -1,36 +1,24 @@
-  <div class="container">
-    <div class="row">
-      <h4></h4>
-    </div>
-  </div>
-
-  <div class="row">
-    <% @category.articles.each do |cat_art| %>
-    <div class="col s12 m3 l3">
-
-    <div class="card horizontal">
-        <div class="row">
-          <div class="col s6 m8 l8">
-            <div class="card-image">
-              <%= image_tag(cat_art.image) if cat_art.image.attached? %>
-            </div>
+<div class="row">
+  <%@category.articles.each do |cat_art| %>
+    <div class="col s12 m6 l6">
+      <div class="carte">
+        <div class="col s12 m4 l4">
+          <div class="cat-img"> <%= image_tag(cat_art.image) if cat_art.image.attached?%></div>
+        </div>
+        <div class="col s12 m8 l8">
+          <div class="title">
+            <%= link_to @category.name, article_path %>
           </div>
-          <div class="col s6 m2 l2">
-            <div class="card-stacked">
-              <div class="card-content">
-                <p><%= cat_art.text %></p>
-              </div>
-              <div class="card-action">
-                <%= link_to cat_art.title, article_path %>
-              </div>
-            </div>
+          <div class="text">
+            <p>
+              <strong><%= cat_art.title %></strong><br>
+              <%= cat_art.text.truncate(70) %><br>
+              <%= link_to 'Read more', article_path(cat_art), class: 'btn' %>
+            </p>
           </div>
         </div>
       </div>
 
-
     </div>
-    <% end %>
-  </div>
-
-
+  <% end %>
+</div>

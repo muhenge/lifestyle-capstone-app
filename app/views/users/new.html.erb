@@ -15,7 +15,8 @@
         <div class="input-field col s6">
           <%= p.text_field :username, placeholder:"Enter a username", class:'validate'%><br><br>
           <%= p.label :username %>
-          <%= p.submit class:'waves-effect waves-light btn'%>
+          <%= p.submit class:'btn'%> |
+          <%= link_to 'Login', new_session_path %>
       <% end %>
     </div>
 

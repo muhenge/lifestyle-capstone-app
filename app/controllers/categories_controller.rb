@@ -2,16 +2,14 @@ class CategoriesController < ApplicationController
   include CategoriesHelper
   include ArticlesHelper
   before_action :set_category, only: %i[show edit update destroy vote]
-  # before_action :current_user
-
+  before_action :current_user, only: [:show]
   def index
     @categories = Category.all.order_by_priority
+
     # @articles_for_author = Article.article_by_author
   end
 
-  def show
-
-  end
+  def show; end
 
   def edit; end
 
@@ -22,7 +20,6 @@ class CategoriesController < ApplicationController
 
   def new
     @category = Category.new
-      # @cat_all = Category.all
   end
 
   def create
