@@ -1,0 +1,22 @@
+ <div class="row">
+
+      <% @articles.each do |article| %>
+     <div class="col s12 m6 l3">
+       <div class="card small">
+          <div class="card-image">
+            <%= image_tag(article.image) if article.image.attached?%>
+            <span class="card-title"><%= article.title.capitalize %></span>
+          </div>
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+          </div>
+          <div class="card-action">
+            <%= link_to "Read it", article_path(article), class:"waves-effect waves-light btn"%>
+            <%= link_to "Delete", article_path(article), method: :delete, class:"waves-effect waves-light btn red" %>
+        </div>
+
+    </div>
+   <% end %>
+  </div>
+</div>
