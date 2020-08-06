@@ -19,11 +19,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash.notice = 'User created'
+      flash.notice = 'Account created'
       session[:auth] = @user
       redirect_to new_session_path
     else
-      flash.notice = 'User not created'
+      flash.notice = 'Account not created, try again'
       render 'new'
     end
   end

@@ -86,3 +86,11 @@ a.btn {
     background-color: #f99c00;
 }
 
+.most_voted {
+    height: 50vh;
+}
+
+a.links {
+    color: #fa6000;
+}
+

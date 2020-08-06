@@ -1,18 +1,12 @@
 <div class="row">
   <% @most_voted_art.each do |article| %>
   <div class="col s12 m12 l12">
-    <div class="card" style="background-image: url('<%= rails_blob_url(article.image) if article.image.attached? %>');">
+    <div class="card most_voted" style="background-image: url('<%= rails_blob_url(article.image) if article.image.attached? %>');">
       <div class="card-content white-text">
-        <span class="card-title"><%= article.title %></span>
+        <span class="card-title"><%= link_to article.title, article_path(article), class: 'links'%><span class="badge">(The most voted)</span></span><br>
 
-        <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+        <p><%= article.text.truncate(50)%></p>
       </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
-        <a href="#">This is a link</a>
-      </div>
-    </div>
 </div>
     <%end %>
 </div>
@@ -23,7 +17,7 @@
 
         <div class="card small" style="background-image: url('<%= rails_blob_url(cat.image) if cat.image.attached? %>');">
           <div class="card-content white-text">
-            <span class="card-title"><%= link_to cat.name, category_path(cat) %></span>
+            <span class="card-title"><%= link_to cat.name, category_path(cat), class: 'links' %></span>
 
           </div>
         </div>
