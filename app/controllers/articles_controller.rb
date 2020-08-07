@@ -28,11 +28,11 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.authorid = current_user.id
     if @article.save
+      flash.notice = "Article '#{@article.title}' Created"
       redirect_to articles_path
-      flash.info = 'Article created'
     else
       render 'new'
-      flash.error = 'not created,try again'
+      flash.notice = 'not created,try again'
       # render 'new'
     end
   end

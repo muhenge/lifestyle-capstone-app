@@ -12,11 +12,7 @@
       <%= a.text_area :text, placeholder:"body", class:"materialize-textarea"%><br>
       <%= a.file_field :image, placeholder:"Add an image", class:""%><br><br>
       <div class="form-group">
-        <% if @category.valid? == false %>
-          <p class="red-text text-darken-2"><%=flash[:notice] = "Selection required"%></p>
-        <% end %>
           <%= collection_select(:article, :category_id, @categories, :id, :name, {class:"form-control", id:"exampleFormControlSelect1"})%>
-
       </div><br><br>
       <div class="row">
         <div class="col s12 m12 l6">
