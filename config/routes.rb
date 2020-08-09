@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root 'home#start'
   get 'admins/login'
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
   get 'sessions/login', to: 'sessions#login', as: :new_session
   get 'categories/new'
   get 'users/:authorid/articles' => 'users#articles', :as => :user_articles
-  #get 'articles/author_article' => 'articlesor_article'
+  # get 'articles/author_article' => 'articlesor_article'
   # get 'admins/login', to: 'sessions#login', as: :new_session
   get '/sessions/logout' => 'sessions#destroy'
   get '/articles/:id/vote' => 'articles#upvote'

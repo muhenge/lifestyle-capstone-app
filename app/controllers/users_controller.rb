@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   include UsersHelper
   before_action :current_user, except: %i[new create]
@@ -27,6 +29,4 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
-
-  
 end

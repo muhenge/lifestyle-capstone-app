@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class HomeController < ApplicationController
   include HomeHelper
   include CategoriesHelper
@@ -8,7 +10,7 @@ class HomeController < ApplicationController
 
   def index
     @categories = Category.all
-    @most_voted_art = Article.select {|article| article.get_upvotes.size == 3}
+    @most_voted_art = Article.select { |article| article.get_upvotes.size == 3 }
     @current_user
   end
 

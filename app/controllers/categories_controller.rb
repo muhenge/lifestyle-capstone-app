@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CategoriesController < ApplicationController
   include CategoriesHelper
   include ArticlesHelper
@@ -35,5 +37,4 @@ class CategoriesController < ApplicationController
     Category.find(params[:id]).destroy
     redirect_to articles_path
   end
-
 end

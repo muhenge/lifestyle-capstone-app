@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ArticlesController < ApplicationController
   include ArticlesHelper
 
@@ -8,7 +10,6 @@ class ArticlesController < ApplicationController
     @articles = Article.all.ordered_by_most_recent
     @categories = Category.all
   end
-
 
   def show; end
 
@@ -46,7 +47,6 @@ class ArticlesController < ApplicationController
     @article.upvote_by current_user
     redirect_to articles_path
   end
-
 
   def downvote
     @article.downvote_by current_user
