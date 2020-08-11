@@ -18,6 +18,11 @@ class UsersController < ApplicationController
     @articles = @author.articles
   end
 
+  def destroy
+    Article.find(params[:id]).destroy
+    redirect_to articles_path
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save

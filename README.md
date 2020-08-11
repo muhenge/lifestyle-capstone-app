@@ -22,65 +22,39 @@ Additional description about the project and its features.
 - #### Frontend
     - HTML, CSS
     - materializecss
-
-
+    
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://henzblog.herokuapp.com/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
-
+   - [Ruby](https://www.ruby-lang.org/en/)
+   - [Rails](https://rubyonrails.org/)
+   - [Postgresql](https://www.postgresql.org/)
+   - Code editor like [Visual studio code](https://code.visualstudio.com/), [Sublime-text](https://www.sublimetext.com/3) or [atom](https://atom.io/)
 ### Setup
-
+* Start by cloning the project by copy/paste this ```git clone https://github.com/muhenge/lifestyle-capstone-app.git``` in the terminal
 ### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+  - In the terminal to ```bundle install``` if you have [Ruby](https://www.ruby-lang.org/en/) and [Rails](https://rubyonrails.org/) to install all ruby gems used
+  - Run ```rails db:create``` and ```rails db:migrate``` for the Database migration
 
 ## Authors
 
 👤 **Author1**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@muhenge](https://github.com/muhenge)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/muhenge/lifestyle-capstone-app/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](lic.url) licensed.

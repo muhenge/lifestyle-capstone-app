@@ -19,9 +19,8 @@ Rails.application.routes.draw do
   post 'sessions/login', to: 'sessions#check'
   post 'admins/login', to: 'admins#check'
   post 'admins/check', to: 'admins#check'
-
   delete 'sessions/logout', to: 'sessions#destroy', as: :destroy_session
-  resources :users, only: %i[new create show author_articles] do
+  resources :users, only: %i[new create show user_articles] do
     member do
       get :articles
     end
