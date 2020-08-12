@@ -3,8 +3,7 @@
   <div class="col s12 m12 l12">
     <div class="card most_voted" style="background-image: url('<%= rails_blob_url(article.image) if article.image.attached? %>');">
       <div class="card-content white-text">
-        <span class="card-title"><%= link_to article.title, article_path(article), class: 'links'%><span class="badge">(The most voted)</span></span><br>
-
+        <span class="card-title"><%= link_to article.title.capitalize, article_path(article), class: 'links'%><span class="badge">(The most voted)</span></span><br>
         <p><%= article.text.truncate(50)%></p>
       </div>
 </div>
