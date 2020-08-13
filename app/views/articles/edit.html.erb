@@ -2,13 +2,10 @@
 <div class="container">
   <div class="row">
     <%= form_for @article do |a| %>
-      <%if @article.errors[:title][0] == "can't be blank"%>
-        <p class="red-text text-darken-2"><%=flash[:notice] = "Title can't be black"%></p>
-      <%end%>
+     
+        <p class="red-text text-darken-2"><%= title_error(@article) ></p>
       <%= a.text_field :title, placeholder:"title"%><br>
-      <%if @article.errors[:text][0] == "can't be blank"%>
-        <p class="red-text text-darken-2"><%=flash[:notice] = "Body can't be black"%></p>
-      <%end%>
+        <p class="red-text text-darken-2"><%= text_error(@article)%></p>
       <%= a.text_area :text, placeholder:"body", class:"materialize-textarea"%><br>
       <%= a.file_field :image, placeholder:"Add an image", class:""%><br><br>
       <div class="form-group">

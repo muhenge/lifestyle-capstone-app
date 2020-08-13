@@ -11,16 +11,13 @@
 </div>
   <div class="row">
     <% @categories.each do |cat| %>
-
       <div class="col s12 m6 l3">
 
-        <div class="card small" style="background-image: url('<%= rails_blob_url(cat.image) if cat.image.attached? %>');">
+        <div class="card small" style="background-image: url('<%= rails_blob_url(cat.image) if cat.image.attached?%>');">
           <div class="card-content white-text">
             <span class="card-title"><%= link_to cat.name, category_path(cat), class: 'links' %></span>
-
           </div>
         </div>
       </div>
-
     <% end %>
   </div>
