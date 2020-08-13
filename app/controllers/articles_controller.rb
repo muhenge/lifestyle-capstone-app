@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all.ordered_by_most_recent
-    @categories = Category.all
+    @categories = Category.all.priority
   end
 
   def show; end

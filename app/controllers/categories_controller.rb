@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: %i[show edit update destroy vote]
   before_action :current_user, only: [:show]
   def index
-    @categories = Category.all.order_by_priority
+    @categories = Category.all.priority
 
     # @articles_for_author = Article.article_by_author
   end

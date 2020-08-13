@@ -1,9 +1,9 @@
-# frozen_string_literal: true
 
 class Category < ApplicationRecord
   has_many :articles
   has_one_attached :image
-
+  def self.priority
+    Category.order_by_priority.includes(:articles).limit(4)
+  end
   scope :order_by_priority, -> { order(priority: :desc) }
-  scope :ordered_priority, -> { order(priority: :desc) }
 end
