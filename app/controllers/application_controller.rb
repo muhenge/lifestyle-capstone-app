@@ -12,5 +12,5 @@ class ApplicationController < ActionController::Base
   def signin
     redirect_to articles_path if session[:auth]
   end
-  add_flash_types :info, :error, :warning
+
 end

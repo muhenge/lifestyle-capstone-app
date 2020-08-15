@@ -7,8 +7,6 @@ class CategoriesController < ApplicationController
   before_action :current_user, only: [:show]
   def index
     @categories = Category.all.priority
-
-    # @articles_for_author = Article.article_by_author
   end
 
   def show; end
