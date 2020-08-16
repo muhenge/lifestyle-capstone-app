@@ -23,7 +23,6 @@
       <%= link_to 'LifeStyle', home_index_path, class:'brand-logo flow-text' %>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <% if @current_user %>
-          <li><%= link_to "Categories", home_index_path, class: 'login' %></li>
           <li><%= link_to "All articles", articles_path, class: 'login' %></li>
           <li><%= link_to "Add a new article", new_article_path, class: 'login' %></li>
           <li><%= link_to 'My articles', user_articles_path(@current_user), class: 'login'%></li>
