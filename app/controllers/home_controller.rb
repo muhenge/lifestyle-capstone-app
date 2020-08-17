@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class HomeController < ApplicationController
   include HomeHelper
   include CategoriesHelper
@@ -10,9 +8,8 @@ class HomeController < ApplicationController
 
   def index
     @categories = Category.all.priority
-    all_up_votes = Article.select { |art| art.cached_votes_up }
-    max_vote = all_up_votes.map { |i| i.cached_votes_up }.max
-    @most_voted_art = Article.select { |article| article.get_upvotes.size == max_vote }
+    all_up_votes = Article.all.pluck(:cached_votes_up).max
+    @most_voted_art = Article.all.where(cached_votes_up: all_up_votes)
     @current_user
   end
 

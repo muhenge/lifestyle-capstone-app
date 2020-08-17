@@ -19,3 +19,8 @@ span.badge {
     float: right;
     background-color: #fa6000;
 }
+
+.start {
+    background-color: #ffe7cb;
+    margin-top: -25px;
+}

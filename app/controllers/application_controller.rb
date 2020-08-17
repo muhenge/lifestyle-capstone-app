@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ApplicationController < ActionController::Base
   def current_user
     if session[:auth]
@@ -12,5 +10,4 @@ class ApplicationController < ActionController::Base
   def signin
     redirect_to articles_path if session[:auth]
   end
-
 end
