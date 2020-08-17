@@ -1,13 +1,15 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #ffe7cb;
+    background-color: whitesmoke;
     background-size: cover;
 }
 nav {
     background-color: whitesmoke;
     color: black;
+
 }
+
 
 .login {
     color: #8b8680;
@@ -20,6 +22,10 @@ nav {
 nav a.brand-logo {
     background-color: #fa6000;
     color: white;
+}
+
+ul.center-ul {
+    padding-left: 450px;
 }
 
 form {
@@ -53,6 +59,11 @@ nav.navibar .nav-class {
     color: #fa6000;
 }
 
+.card {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .cat-img img {
     object-fit: cover;
     height: 200px;
@@ -63,6 +74,11 @@ nav.navibar .nav-class {
     object-fit: cover;
     height: 200px;
     width: 200px;
+}
+
+.card-content {
+    position: relative;
+    top: 155px;
 }
 
 .carte {
@@ -88,6 +104,10 @@ a.btn {
 
 .most_voted {
     height: 50vh;
+    padding: 70px;
+    margin-top: -24px;
+    background-size: cover;
+    background-repeat: no-repeat;   
 }
 
 a.links {
