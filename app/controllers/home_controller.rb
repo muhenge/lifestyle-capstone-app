@@ -8,8 +8,8 @@ class HomeController < ApplicationController
 
   def index
     @categories = Category.all.priority
-    all_up_votes = Article.all.pluck(:cached_votes_up).max
-    @most_voted_art = Article.all.where(cached_votes_up: all_up_votes)
+    all_upvotes = Article.all.pluck(:cached_votes_up).max
+    @most_voted_art = Article.all.where(cached_votes_up: all_upvotes)
     @current_user
   end
 
