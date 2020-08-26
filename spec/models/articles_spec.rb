@@ -3,12 +3,11 @@ require 'rails_helper.rb'
 RSpec.describe Article, type: :model do
   context 'Article content' do
     it "title can't be nil"  do
-      article = Article.new(title:nil)
+      article = Article.new(title: nil)
       expect(article.valid?).to be false
     end
     it "text can't be nil" do
-      article = Article.new(text: nil)
-      article.valid?  
+      article = Article.new(text: nil)  
       expect(article.invalid?).to be true
     end
   end
@@ -18,5 +17,4 @@ RSpec.describe Article, type: :model do
       it { should belong_to(:author) }
     end
   end
-
 end
