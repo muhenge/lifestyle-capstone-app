@@ -32,7 +32,6 @@ class ArticlesController < ApplicationController
     else
       render 'new'
       flash.notice = 'not created,try again'
-      # render 'new'
     end
   end
 

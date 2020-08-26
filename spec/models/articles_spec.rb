@@ -4,13 +4,12 @@ RSpec.describe Article, type: :model do
   context 'Article content' do
     it "title can't be nil"  do
       article = Article.new(title:nil)
-      article.valid?
-      expect(article.errors[:title][0]).to include("can't be blank")
+      expect(article.valid?).to be false
     end
     it "text can't be nil" do
       article = Article.new(text: nil)
       article.valid?  
-      expect(article.errors[:text][0]).to include("can't be blank")
+      expect(article.invalid?).to be true
     end
   end
   context 'is associated to' do
