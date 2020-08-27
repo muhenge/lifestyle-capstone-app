@@ -142,3 +142,17 @@ a.links {
     background-clip: text;
     font-size: large;
 }
+
+.logout,
+.in-out {
+    float: right;
+}
+
+.flash {
+    text-align: center;
+    color: brown;
+}
+
+.rows {
+    margin-top: 55px;
+}
