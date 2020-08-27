@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #  Character.create(name: 'Luke', movie: movies.first)
+# @message.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
+
 Category.create(name:'Technology',priority:1)
 Category.create(name:'Sciences',priority: 2)
 Category.create(name:'Art',priority: 3)
