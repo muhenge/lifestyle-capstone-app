@@ -8,4 +8,3 @@ class Category < ApplicationRecord
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
 
 end
-2323
