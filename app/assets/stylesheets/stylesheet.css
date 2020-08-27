@@ -133,14 +133,9 @@ a.links {
 					background-clip: text;
 	color: transparent;
     filter: invert(1) grayscale(1) contrast(9); */
-    height: inherit;
-    background: inherit;
-    color: transparent;
-    filter: invert(1);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    font-size: large;
+    color: white;
+    mix-blend-mode: difference;
+    font: large;
 }
 
 .logout,
