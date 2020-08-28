@@ -2,8 +2,7 @@ class HomeController < ApplicationController
   include HomeHelper
   include CategoriesHelper
   include ArticlesHelper
-  require 'articles_controller'
-  require 'categories_controller'
+
   before_action :current_user, only: %i[index articles]
 
   def index
