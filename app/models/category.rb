@@ -6,5 +6,4 @@ class Category < ApplicationRecord
   end
   scope :order_by_priority, -> { order(priority: :desc) }
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
-
 end
