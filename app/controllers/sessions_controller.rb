@@ -6,12 +6,12 @@ class SessionsController < ApplicationController
   end
 
   def check
-    @current_user = User.where(username: user_params['username']).first
+    @current_user = User.where(name: user_params['name']).first
     if @current_user
       session[:auth] = @current_user
       redirect_to home_index_path
     else
-      flash.notice = 'Incorrect username, try again'
+      flash.notice = 'Incorrect name, try again'
       redirect_to new_session_path
     end
   end

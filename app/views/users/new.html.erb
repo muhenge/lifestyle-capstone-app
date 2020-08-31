@@ -10,11 +10,11 @@
           </ul>
         </div>
       <% end %>
-      <h3><%= @user.username%></h3>
+      <h3><%= @user.name%></h3>
       <%= form_for @user do |p| %>
         <div class="input-field col s6">
-          <%= p.text_field :username, placeholder:"Enter a username", class:'validate'%><br><br>
-          <%= p.label :username %>
+          <%= p.text_field :name, placeholder:"Enter a name", class:'validate'%><br><br>
+          <%= p.label :name %>
           <%= p.submit class:'btnn'%> |
           <%= link_to 'Login', new_session_path, class:"links" %>
       <% end %>

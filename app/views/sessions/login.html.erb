@@ -8,8 +8,8 @@
   <div class="row">
     <div class="forms">
       <%= form_for @user, url: sessions_login_path do |p| %>
-        <%= p.label :username %><br><br>
-        <%= p.text_field :username %><br><br>
+        <%= p.label :name %><br><br>
+        <%= p.text_field :name %><br><br>
             <%= p.submit "Log in", class:"btnn"%> |
             <%= link_to 'Register', new_user_path, class:"links"%>
       <% end %>

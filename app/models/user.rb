@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   acts_as_voter
-  validates :username, presence: true
+  validates :name, presence: true
   has_many :articles, class_name: 'Article', foreign_key: 'authorid'
 
   def most_recent
