@@ -7,5 +7,4 @@ class CategoriesController < ApplicationController
   def show
     @cat_articles = @category.articles.ordered_by_most_recent
   end
-  
 end

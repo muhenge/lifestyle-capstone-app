@@ -115,7 +115,7 @@ a.btn {
     background-color: #f99c00;
    
 }
-/* home page */
+/* home#index page */
 
 .most_voted {
     height: 65vh;
@@ -146,6 +146,12 @@ a.links {
     color: white;
     mix-blend-mode: difference;
     font: large;
+}
+
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: -8px;
 }
 
 .logout,

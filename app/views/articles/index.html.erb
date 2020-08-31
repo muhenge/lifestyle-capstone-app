@@ -9,7 +9,7 @@
         <div class="col s12 m6 l3">
           <div class="card small" style="background-image: url('<%= rails_blob_url(article.image) if article.image.attached? %>');">
             <div class="card-content white-text">
-              <span class="card-title"><%= link_to article.title.capitalize, article_path(article) %></span>
+              <span class="card-title"><%= link_to article.title.capitalize, article_path(article),class:"links" %></span>
             </div>
             <div class="card-action">
               <%= link_to vote_article_path(article), method: :put do %>
