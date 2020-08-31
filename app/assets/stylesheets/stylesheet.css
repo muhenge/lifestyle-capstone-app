@@ -102,8 +102,18 @@ strong {
     margin: -178px auto 0 auto;
 }
 
+.btnn {
+    background-color: #fa6000;
+    padding: 10px;
+    border: none;
+    color: white;
+    box-shadow: transparent;
+    cursor: pointer;
+}
+
 a.btn {
     background-color: #f99c00;
+   
 }
 /* home page */
 
@@ -117,6 +127,10 @@ a.btn {
 
 a.links {
     color: #fa6000;
+}
+
+.cat_links {
+    text-decoration: underline yellow;
 }
 
 .title a.links {

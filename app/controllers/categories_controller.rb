@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
   before_action :current_user, only: [:show]
 
   def show
-    @category.articles.most_voted
+    @cat_articles = @category.articles.ordered_by_most_recent
   end
   
 end
