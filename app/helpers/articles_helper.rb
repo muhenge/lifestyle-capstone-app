@@ -14,4 +14,11 @@ module ArticlesHelper
   def text_error(article)
     flash[:notice] = "Text can't be empty" if article.errors[:text][0] == "can't be blank"
   end
+
+  def cat_error(article)
+     flash[:notice] = "Please select" if article.errors.messages[:category][0] == "must exist"
+
+
+  end
+  
 end
