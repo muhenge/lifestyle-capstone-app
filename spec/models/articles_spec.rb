@@ -2,12 +2,12 @@ require 'rails_helper.rb'
 
 RSpec.describe Article, type: :model do
   context 'Article content' do
-    it "title can't be nil"  do
+    it "title can't be nil" do
       article = Article.new(title: nil)
       expect(article.valid?).to be false
     end
     it "text can't be nil" do
-      article = Article.new(text: nil)  
+      article = Article.new(text: nil)
       expect(article.invalid?).to be true
     end
   end

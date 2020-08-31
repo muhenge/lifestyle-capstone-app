@@ -16,9 +16,6 @@ module ArticlesHelper
   end
 
   def cat_error(article)
-     flash[:notice] = "Please select" if article.errors.messages[:category][0] == "must exist"
-
-
+    flash[:notice] = 'Please select' if article.errors.messages[:category][0] == 'must exist'
   end
-  
 end
