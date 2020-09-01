@@ -167,3 +167,26 @@ a.links {
 .rows {
     margin-top: 55px;
 }
+
+/* Footer */
+
+footer {
+    background-color: #4e443f;
+    height: 57px;
+    padding: 12px;
+    color: #fa6000;
+}
+
+.footer-content {
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content a.brand-logo {
+    background-color: #fa6000;
+    color: white;
+    padding: 12px;
+}

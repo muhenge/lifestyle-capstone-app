@@ -31,7 +31,7 @@ class ArticlesController < ApplicationController
       redirect_to articles_path
     else
       render 'new'
-      flash.notice = 'not created,try again'
+      flash.notice = 'Article not created,try again'
     end
   end
 
