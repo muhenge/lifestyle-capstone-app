@@ -3,7 +3,6 @@ module ArticlesHelper
     params.require(:article).permit(:title, :text, :image, :category_id, :authorid)
   end
 
-
   def title_error(article)
     flash[:notice] = "Title can't be empty" if article.errors[:title][0] == "can't be blank"
   end
@@ -17,8 +16,8 @@ module ArticlesHelper
   end
 
   private
+
   def set_article
     @article = Article.find(params[:id])
   end
-
 end
