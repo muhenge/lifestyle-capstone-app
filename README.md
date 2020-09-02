@@ -5,8 +5,8 @@
   <h1 align="center">Ruby on Rails: Blog app</h1>
 
   <p align="center">
- This is a blog app project, user can write a blog and select among all categories
-that the system provide, it is from the <a href="https://www.microverse.org">Microverse</a> Ruby on Rails main curriculum <br />
+ This is a blog app project, user with an account in the app can create article or read other articles, the user also can select among all categories
+provided by the system, it is from the <a href="https://www.microverse.org">Microverse</a> Ruby on Rails main curriculum <br />
 </p>
 
 # LifeBlog
