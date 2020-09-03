@@ -1,4 +1,9 @@
 <div class="container">
+  <div class="flash">
+    <p class="flow-text text-darken-3x"><%= flash.notice %></p>
+  </div>
+</div>
+<div class="container">
   <div class="row">
     <div class="forms">
       <% if @user.errors.any? %>
