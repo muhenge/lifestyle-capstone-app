@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
-
   before_action :set_article, only: %i[show edit update destroy upvote downvote]
   before_action :current_user, only: %i[upvote downvote new create]
 

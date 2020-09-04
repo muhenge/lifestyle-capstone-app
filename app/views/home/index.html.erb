@@ -1,4 +1,5 @@
 <div class="row">
+
   <% @most_voted_art.each do |article| %>
     <div class="most_voted" style="background-image: url('<%= rails_blob_url(article.image) if article.image.attached? %>');">
       <div class="carte-content">

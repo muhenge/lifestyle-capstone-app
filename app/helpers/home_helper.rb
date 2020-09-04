@@ -6,4 +6,7 @@ module HomeHelper
   def set_article
     @article = Article.find(params[:id])
   end
+
+
+
 end
