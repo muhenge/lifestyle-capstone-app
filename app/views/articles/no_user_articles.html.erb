@@ -1,0 +1,35 @@
+
+<div class="container">
+  <div class="flash">
+    <p class="flow-text text-darken-3x"><%= flash.notice %></p>
+  </div>
+</div>
+<div class="row">
+  <% @articles.each do |article| %>
+
+    <div class="col s12 m6 l3">
+      <div class="card small" style="background-image: url('<%= rails_blob_url(article.image) if article.image.attached? %>');">
+        <div class="card-content white-text">
+          <span class="card-title"><%= link_to article.title.capitalize, article_path(article),class:"links" %></span>
+        </div>
+        <div class="card-action">
+          <%= link_to vote_article_path(article), method: :put do %>
+            Vote
+            <%= article.get_upvotes.size %>
+          <% end %>
+
+          <%= link_to not_vote_article_path(article), method: :put do %>
+            Refuse
+            <%= article.get_downvotes.size %>
+          <% end %>
+          <div class="row">
+            <div class="col s12 m6 l6">
+              Author: <%= article.author.name.capitalize %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+</div>

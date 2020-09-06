@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
   before_action :set_article, only: %i[show edit update destroy upvote downvote]
-  before_action :current_user, only: %i[upvote downvote new create]
+  before_action :current_user, only: %i[index upvote downvote new create]
 
   def index
     @articles = Article.all.ordered_by_most_recent
@@ -48,4 +48,8 @@ class ArticlesController < ApplicationController
     @article.downvote_by current_user
     redirect_to articles_path
   end
+  def no_user_articles
+    @articles = Article.all.ordered_by_most_recent.limit(8)
+  end
+
 end

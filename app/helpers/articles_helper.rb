@@ -15,9 +15,15 @@ module ArticlesHelper
     flash[:notice] = 'Please select' if article.errors.messages[:category][0] == 'must exist'
   end
 
+
   private
 
   def set_article
-    @article = Article.find(params[:id])
+   @article = Article.find(params[:id]) or not_found
+  end
+
+
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
   end
 end

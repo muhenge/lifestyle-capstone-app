@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -113,7 +114,7 @@ strong {
 
 a.btn {
     background-color: #f99c00;
-   
+
 }
 /* home#index page */
 
@@ -193,4 +194,22 @@ footer {
     background-color: #fa6000;
     color: white;
     padding: 12px;
+}
+
+/* index article page */
+
+.articles {
+    float: right;
+    margin-top: 250px;
+    position: sticky;
+}
+
+.myart {
+    background-color: #fa6000;
+    padding: 12px 70px 12px 70px;
+    text-align: center;
+    border: none;
+    color: white;
+    box-shadow: transparent;
+    cursor: pointer;
 }

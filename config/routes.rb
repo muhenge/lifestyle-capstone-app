@@ -10,24 +10,29 @@ Rails.application.routes.draw do
   get 'users/:authorid/articles' => 'users#articles', :as => :user_articles
   get '/sessions/logout' => 'sessions#destroy'
   get '/articles/:id/vote' => 'articles#upvote'
+  get '/no_user_articles', to:'articles#no_user_articles'
+  get '/no_user_categories', to:'categories#no_user_categories'
   get '/articles/:id/not_vote' => 'articles#downvote'
   post 'sessions/login', to: 'sessions#check'
-  post 'admins/login', to: 'admins#check'
-  post 'admins/check', to: 'admins#check'
   delete 'sessions/logout', to: 'sessions#destroy', as: :destroy_session
   resources :users, only: %i[new create show user_articles] do
     member do
       get :articles
     end
   end
-  resources :articles
-  resources :admins
+  resources :articles do
+    collection do
+      get 'no_user_articles'
+    end
+  end
   resources :articles do
     member do
       put 'vote' => 'articles#upvote'
       put 'not_vote' => 'articles#downvote'
     end
   end
-  resources :categories
+  resources :categories do
+    get 'no_user_categories'
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
