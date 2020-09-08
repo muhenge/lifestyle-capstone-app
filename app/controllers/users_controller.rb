@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     if @user.save
       flash.notice = 'Account created'
       session[:auth] = @user
-      redirect_to new_session_path
+      redirect_to home_index_path
     else
       flash.notice = 'Account not created, try again'
       render 'new'
