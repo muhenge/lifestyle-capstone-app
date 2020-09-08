@@ -48,8 +48,8 @@ class ArticlesController < ApplicationController
     @article.downvote_by current_user
     redirect_to articles_path
   end
+
   def no_user_articles
     @articles = Article.all.ordered_by_most_recent.limit(8)
   end
-
 end
