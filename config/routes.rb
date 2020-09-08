@@ -30,9 +30,13 @@ Rails.application.routes.draw do
       put 'vote' => 'articles#upvote'
       put 'not_vote' => 'articles#downvote'
     end
-  end
+  end 
   resources :categories do
     get 'no_user_categories'
   end
+  # errors routes
+  get '/404', to: 'errors#not_found'
+  get '/422', to: 'errors#unacceptable'
+  get '/500', to: 'errors#server_errors'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
