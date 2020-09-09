@@ -1,11 +1,12 @@
 
+html,
 body {
     margin: 0;
     padding: 0;
     background-color: whitesmoke;
     background-size: cover;
     position: relative;
-    
+    min-height: 100vh;
 }
 
 nav {
@@ -143,7 +144,7 @@ a.links {
 
 .carte-content {
     position: absolute;
-    bottom: 30%;
+    top: 35%;
 }
 
 .card-para p{
@@ -151,7 +152,7 @@ a.links {
     mix-blend-mode: difference;
     font: large;
 }
-
+/* ------------------------------------------- */
 .card-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -180,7 +181,7 @@ footer {
     padding: 12px;
     color: #fa6000;
     position: absolute;
-    bottom: -5%;
+    bottom: -10%;
     width: 100%;
 }
 
