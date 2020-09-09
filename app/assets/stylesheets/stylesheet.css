@@ -1,10 +1,12 @@
 
+html,
 body {
     margin: 0;
     padding: 0;
     background-color: whitesmoke;
     background-size: cover;
     position: relative;
+    min-height: 100vh;
 }
 
 nav {
@@ -179,7 +181,7 @@ footer {
     padding: 12px;
     color: #fa6000;
     position: absolute;
-    bottom: -5%;
+    bottom: -10%;
     width: 100%;
 }
 
