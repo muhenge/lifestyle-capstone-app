@@ -1,76 +1,84 @@
+
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
 
-> One paragraph statement about the project.
+  <h1 align="center">Ruby on Rails: Blog app</h1>
 
-![screenshot](./app_screenshot.png)
+  <p align="center">
+ This is a blog app project, user with an account in the app can create article or read other articles, the user also can select among all categories
+provided by the system, it is from the <a href="https://www.microverse.org">Microverse</a> Ruby on Rails main curriculum <br />
+</p>
+
+# LifeBlog
+
+![screenshot](app/assets/images/articless.png)
+article page to vote
+![screenshot](app/assets/images/categoryarticles.png)
+article based on categories
+![screenshot](app/assets/images/home.png)
+homepage 
 
 Additional description about the project and its features.
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
-
+- #### Backend
+    - Ruby on Rails
+    - Ruby gems
+- #### Frontend
+    - HTML, CSS
+    - materializecss
+    
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://herveblogapp.herokuapp.com/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
-
+   - [Ruby](https://www.ruby-lang.org/en/)
+   - [Rails](https://rubyonrails.org/)
+   - [Postgresql](https://www.postgresql.org/)
+   - Code editor like [Visual studio code](https://code.visualstudio.com/), [Sublime-text](https://www.sublimetext.com/3) or [atom](https://atom.io/)
 ### Setup
-
+* Start by cloning the project by copy/paste this ```git clone https://github.com/muhenge/lifestyle-capstone-app.git``` in the terminal
 ### Install
-
+  - In the terminal to ```bundle install``` if you have [Ruby](https://www.ruby-lang.org/en/) and [Rails](https://rubyonrails.org/) to install all ruby gems used
+  - Run ```rails db:create```  ```rails db:migrate``` ```rails db:seed``` for the Database migration
 ### Usage
-
-### Run tests
-
-### Deployment
-
-
+  - After migration run ```rails server``` and open `http://localhost:3000/` in your browser
+  - You will see the welcome page and start by creating the user
+  ![screenshot](app/assets/images/welcome.png)
+  ## Automated Test
+Run ```bundle exec rspec```
 
 ## Authors
 
 👤 **Author1**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@muhenge](https://github.com/muhenge)
+- LinkedIn: [Mugunga Herve](https://www.linkedin.com/in/mugunga-herve-a62a0ab9/)
+- E-mail: mugunga5@gmail.com
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/muhenge/lifestyle-capstone-app/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [Microverse](https://www.microverse.org/)
+* [Ruby Documentation](https://www.ruby-lang.org/en/documentation/)
+* [Ruby on Rails](https://rubyonrails.org/)
+* [materializecss](materializecss.com/)
+* [Behance](https://www.behance.net/)
+* [Heroku](https://www.heroku.com/)
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](lic.url) licensed.
+## Credits
+* Nelson Sakwa - [LiFEstIye](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)

@@ -1,0 +1,11 @@
+
+<div class="card-row">
+  <% @categories.each do |cat| %>
+    <div class="card small" style="background-image: url('<%= rails_blob_url(cat.image) if cat.image.attached?%>');">
+      <div class="">
+        <span class="card-title"><%= link_to cat.name, category_path(cat), class: 'links cat_links' %></span>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= render partial: 'nav_footer/footer' %>

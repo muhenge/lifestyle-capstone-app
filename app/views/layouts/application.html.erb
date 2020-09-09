@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LifestyleCapstoneApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <!--Import Google Icon Font-->
+    <%= stylesheet_link_tag 'stylesheet.css' %>
+    <%= stylesheet_link_tag 'materialize.min.css' %>
+    <%= stylesheet_link_tag 'start.css' %>
+    <%= stylesheet_link_tag 'articles.css' %>    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+  </head>
+  <body>
+  
+  <%= yield %>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <%= javascript_include_tag "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.4.min.js" %>
+    </body>
+    
+</html>

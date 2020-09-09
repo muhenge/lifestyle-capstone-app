@@ -1,0 +1,13 @@
+  <%= render partial: 'nav_footer/nav' %>
+<div class="container">
+  <div class="row">
+
+    <div class="title">
+      <h1> <%= @article.title.capitalize %> </h1>
+    </div>
+    <div class="text">
+        <article class="flow-text"><%= @article.text%></article>
+    </div>
+  </div>
+</div>
+<%= render partial: 'nav_footer/footer' %>

@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="flash">
+    <p class="flow-text text-darken-3x"><%= flash.notice %></p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="forms">
+      <%= form_for @user, url: sessions_login_path do |p| %>
+        <%= p.label :name %><br><br>
+        <%= p.text_field :name %><br><br>
+            <%= p.submit "Log in", class:"btnn"%> |
+            <%= link_to 'Register', new_user_path, class:"links"%>
+      <% end %>
+    </div>
+
+  </div>
+  </div>
