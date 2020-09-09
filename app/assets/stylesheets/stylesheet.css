@@ -13,14 +13,6 @@ nav {
   color: black;
 }
 
-.login {
-  color: #8b8680;
-}
-
-.login:hover {
-  color: #fa6000;
-}
-
 nav a.brand-logo {
   background-color: #fa6000;
   color: white;
@@ -101,10 +93,6 @@ strong {
   font-weight: bolder;
 }
 
-.rows {
-  margin: -178px auto 0 auto;
-}
-
 .btnn {
   background-color: #fa6000;
   padding: 10px;
@@ -117,6 +105,7 @@ strong {
 a.btn {
   background-color: #f99c00;
 }
+
 /* home#index page */
 
 .most_voted {
@@ -150,7 +139,9 @@ a.links {
   mix-blend-mode: difference;
   font: large;
 }
+
 /* ------------------------------------------- */
+
 .card-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -168,9 +159,11 @@ a.links {
 }
 
 .rows {
-  margin-top: 55px;
+  margin: -178px auto 0 auto;
 }
+
 /* Footer */
+
 footer {
   background-color: #4e443f;
   height: 57px;
