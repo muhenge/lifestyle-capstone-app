@@ -6,15 +6,6 @@
 <div class="container">
   <div class="row">
     <div class="forms">
-      <% if @user.errors.any? %>
-        <div>
-          <ul>
-            <% @user.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
       <h3><%= @user.name%></h3>
       <%= form_for @user do |p| %>
         <div class="input-field col s6">
