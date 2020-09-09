@@ -24,7 +24,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash.notice = 'Account created'
       session[:auth] = @user
       redirect_to home_index_path
     else

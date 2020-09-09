@@ -4,6 +4,8 @@ body {
     padding: 0;
     background-color: whitesmoke;
     background-size: cover;
+    position: relative;
+    
 }
 
 nav {
@@ -119,7 +121,7 @@ a.btn {
 /* home#index page */
 
 .most_voted {
-    height: 65vh;
+    height: 75vh;
     padding: 70px;
     margin-top: -24px;
     background-size: cover;
@@ -177,8 +179,8 @@ footer {
     height: 57px;
     padding: 12px;
     color: #fa6000;
-    position: relative;
-    bottom: 0;
+    position: absolute;
+    bottom: -5%;
     width: 100%;
 }
 

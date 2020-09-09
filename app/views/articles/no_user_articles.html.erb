@@ -14,12 +14,12 @@
         </div>
         <div class="card-action">
           <%= link_to vote_article_path(article), method: :put do %>
-            Vote
+            <span class="material-icons">thumb_up</span>
             <%= article.get_upvotes.size %>
           <% end %>
 
           <%= link_to not_vote_article_path(article), method: :put do %>
-            Refuse
+            <span class="material-icons">thumb_down</span>
             <%= article.get_downvotes.size %>
           <% end %>
           <div class="row">
@@ -33,3 +33,4 @@
 
   <% end %>
 </div>
+<%= render partial: 'nav_footer/footer' %>
