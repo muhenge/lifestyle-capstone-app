@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails lifestyle-capstone-app: production" uuid="e9717597-4de3-4831-a4fa-a215ee685ee5">
+      <driver-ref>greenplum</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/lifestyle_capstone_app_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails lifestyle-capstone-app: development" uuid="a5e891c8-0e56-40c5-91f1-eb389aae48cc">
+      <driver-ref>greenplum</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/lifestyle_capstone_app_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails lifestyle-capstone-app: test" uuid="7c467c93-e7e3-4dbd-846c-922712350d45">
+      <driver-ref>greenplum</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/lifestyle_capstone_app_test</jdbc-url>
+    </data-source>
+  </component>
+</project>
