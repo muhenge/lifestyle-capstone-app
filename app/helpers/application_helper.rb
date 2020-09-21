@@ -1,3 +1,5 @@
 module ApplicationHelper
-  def current_user(user); end
+  def logged_in?
+    !@current_user.nil?
+  end
 end

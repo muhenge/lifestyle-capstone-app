@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_31_213715) do
+ActiveRecord::Schema.define(version: 2020_09_21_195842) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,13 +40,13 @@ ActiveRecord::Schema.define(version: 2020_07_31_213715) do
     t.string "title"
     t.text "text"
     t.string "image"
-    t.integer "authorid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "category_id"
     t.integer "cached_votes_total", default: 0
     t.integer "cached_votes_up", default: 0
     t.integer "cached_votes_down", default: 0
+    t.string "user_id"
     t.index ["cached_votes_down"], name: "index_articles_on_cached_votes_down"
     t.index ["cached_votes_total"], name: "index_articles_on_cached_votes_total"
     t.index ["cached_votes_up"], name: "index_articles_on_cached_votes_up"
@@ -60,9 +60,15 @@ ActiveRecord::Schema.define(version: 2020_07_31_213715) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   create_table "votes", force: :cascade do |t|

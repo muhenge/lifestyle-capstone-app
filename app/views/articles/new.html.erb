@@ -1,10 +1,7 @@
 <%= render partial: 'nav_footer/nav' %>
-<div class="articles">
-  <%= link_to 'My articles', user_articles_path(@current_user), class: 'myart'%>
-</div>
+
 <div class="container">
   <div class="row">
-
     <%= form_for @article do |a| %>
         <p class="red-text text-darken-2"><%= title_error(@article) %></p>
       <%= a.text_field :title, placeholder:"title"%><br>
@@ -16,7 +13,6 @@
           <%= a.collection_select(:category_id, Category.all, :id, :name, :prompt => 'Select') %>
       </div><br><br>
           <%= a.submit class:"btnn" %>
-        
     <% end %><br>
   </div>
   </div>

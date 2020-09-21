@@ -18,13 +18,12 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = Article.new
+    @article = current_user.articles.build
     @categories = Category.all
   end
 
   def create
-    @article = Article.new(article_params)
-    @article.authorid = current_user.id
+    @article = current_user.articles.build(article_params)
     if @article.save
       redirect_to articles_path
       flash.notice = "Article '#{@article.title}' Created"

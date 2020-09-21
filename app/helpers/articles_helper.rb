@@ -1,6 +1,6 @@
 module ArticlesHelper
   def article_params
-    params.require(:article).permit(:title, :text, :image, :category_id, :authorid)
+    params.require(:article).permit(:title, :text, :image, :category_id, :user_id)
   end
 
   def title_error(article)
