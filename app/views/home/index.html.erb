@@ -1,4 +1,25 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<%= link_to 'Register', new_user_registration_path%>
+<%= render partial: 'nav_footer/nav' %>
+<div class="row">
+
+  <% @most_voted_art.each do |article| %>
+    <div class="most_voted" style="background-image: url('<%= rails_blob_url(article.image) if article.image.attached? %>');">
+      <div class="carte-content">
+        <span class="title"><%= link_to article.title.capitalize, article_path(article), class: 'links'%><span class="badge">(The most voted)</span></span><br>
+        <div class="card-para">
+          <p contentEditable role='textbox' aria-multiline='true'><%= article.text.truncate(100) %></p>
+        </div>
+      </div>
+    </div>
+  <%end %>
+</div>
+  <div class="card-row">
+    <% @categories.each do |cat| %>
+        <div class="card small" style="background-image: url('<%= rails_blob_url(cat.image) if cat.image.attached?%>');">
+          <div class="">
+            <span class="card-title"><%= link_to cat.name, category_path(cat), class: 'links cat_links' %></span>
+          </div>
+        </div>
+    <% end %>
+  </div>
+  <%= render partial: 'nav_footer/footer' %>
 <p><%= current_user.email %></p>

@@ -10,12 +10,12 @@
       <% if logged_in? %>
 
         <div class="logout">
-          <%= link_to "Logout", destroy_user_session_path, data: {method: :delete}, class: 'login' %>
+          <%= link_to "Logout", destroy_user_session, data: {method: :delete}, class: 'login' %>
           <span class="#f57c00-text flow-text badge"><%= @current_user.email %></span>
         </div>
         <% else %>
         <div class="in-out">
-          <%=  link_to "Login | Register", new_session_path,  class: 'login' %>
+          <%=  link_to "Login | Register", user_session_path,  class: 'login' %>
         </div>
         <% end %>
     </div>
