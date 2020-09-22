@@ -10,13 +10,13 @@ Rails.application.routes.draw do
   root to: "home#index"
   # get 'home/index'
   get 'users/:authorid/articles' => 'users#articles', :as => :user_articles
-  # get '/sessions/logout' => 'sessions#destroy'
+  delete 'users/sign_out', to: 'devise#sessions'
   get '/articles/:id/vote' => 'articles#upvote'
   # get '/no_user_articles', to:'articles#no_user_articles'
   # get '/no_user_categories', to:'categories#no_user_categories'
   get '/articles/:id/not_vote' => 'articles#downvote'
 
-  delete 'sessions/logout', to: 'sessions#destroy', as: :destroy_session
+  # delete 'sessions/logout', to: 'sessions#destroy', as: :destroy_session
 
   resources :articles do
     collection do

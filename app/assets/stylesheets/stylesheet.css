@@ -58,6 +58,13 @@ nav.navibar .nav-class {
   background-repeat: no-repeat;
 }
 
+
+.card, 
+.card-image, 
+img {
+  object-fit: cover !important;
+}
+
 .cat-img img {
   object-fit: cover;
   height: 270px;
@@ -70,10 +77,10 @@ nav.navibar .nav-class {
   width: 200px;
 }
 
-.card-content {
+/* .card-content {
   position: relative;
   top: 155px;
-}
+} */
 
 .carte {
   margin: 35px 0 35px 0;
@@ -109,9 +116,6 @@ a.btn {
 /* home#index page */
 
 .most_voted {
-  height: 75vh;
-  padding: 70px;
-  margin-top: -24px;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -127,6 +131,12 @@ a.links {
 
 .title a.links {
   color: #fa6000;
+}
+
+.card-title {
+  color: white;
+  mix-blend-mode: difference;
+  font: large;
 }
 
 .carte-content {

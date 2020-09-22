@@ -1,25 +1,40 @@
 <%= render partial: 'nav_footer/nav' %>
 <div class="row">
-
-  <% @most_voted_art.each do |article| %>
-    <div class="most_voted" style="background-image: url('<%= rails_blob_url(article.image) if article.image.attached? %>');">
-      <div class="carte-content">
-        <span class="title"><%= link_to article.title.capitalize, article_path(article), class: 'links'%><span class="badge">(The most voted)</span></span><br>
-        <div class="card-para">
-          <p contentEditable role='textbox' aria-multiline='true'><%= article.text.truncate(100) %></p>
-        </div>
+  <div class="col s12 m12 l12">
+    <% @most_voted_art.each do |article| %>
+    <div class="card medium">
+      <div class="card-image">
+       <%= image_tag rails_blob_url(article.image) if article.image.attached? %>
+        <span class="card-title"><%= article.title.capitalize %></span>
+      </div>
+      <div class="card-content">
+        <p><%= article.text.truncate(500) %></p>
+      </div>
+      <div class="card-action">
+        <%= link_to 'Read more', article_path(article), class:"btn"%>
+        <span class="badge">(The most voted)</span>
       </div>
     </div>
-  <%end %>
-</div>
-  <div class="card-row">
-    <% @categories.each do |cat| %>
-        <div class="card small" style="background-image: url('<%= rails_blob_url(cat.image) if cat.image.attached?%>');">
-          <div class="">
-            <span class="card-title"><%= link_to cat.name, category_path(cat), class: 'links cat_links' %></span>
-          </div>
-        </div>
     <% end %>
   </div>
+</div>
+
+<div class="row">
+    <% @categories.each do |cat| %>
+    <%= link_to category_path(cat), :action => 'go' do %>
+    <div class="col s12 m6 l3">
+       <div class="card small">
+        <div class="card small" style="background-image: url('<%= rails_blob_url(cat.image) if cat.image.attached?%>');">
+          <div class="">
+            <span class="card-title"><%= cat.name %></span>
+          </div>
+        </div>
+      </div>
+      </div>
+    <% end %>
+
+    <% end %>
+
+</div>
+
   <%= render partial: 'nav_footer/footer' %>
-<p><%= current_user.email %></p>
