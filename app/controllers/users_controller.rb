@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
-    def show
-    end
+    include UsersHelper
+    before_action :set_user
+
+    def show;end
 end

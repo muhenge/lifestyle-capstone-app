@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
     <div class="col sm12 m1 l1 contact left-align">
-      hello
+      <%= link_to current_user.username, user_path(current_user) %>
     </div>
      <div class="col sm12 m10 l10">
        <div class="title">
@@ -27,5 +27,5 @@
     </div>
   </div>
   </div>
- 
+
 <%= render partial: 'nav_footer/footer' %>
