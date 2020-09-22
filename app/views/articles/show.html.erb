@@ -1,13 +1,31 @@
   <%= render partial: 'nav_footer/nav' %>
-<div class="container">
-  <div class="row">
-
-    <div class="title">
-      <h1> <%= @article.title.capitalize %> </h1>
+  <div class="container">
+    <div class="row">
+    <div class="col sm12 m1 l1 contact left-align">
+      hello
     </div>
-    <div class="text">
+     <div class="col sm12 m10 l10">
+       <div class="title">
+        <h1> <%= @article.title.capitalize %> </h1>
+      </div>
+      <div class="text">
         <article class="flow-text"><%= @article.text%></article>
+      </div>
+    </div>
+     <div class="col sm12 m1 l1 vote right-align">
+      <%= link_to vote_article_path(@article), method: :put do %>
+          <span class="medium material-icons">thumb_up</span>
+          <%= @article.get_upvotes.size %>
+      <% end %>
+
+      <%= link_to not_vote_article_path(@article), method: :put do %>
+          <span class="medium material-icons">
+              thumb_down
+          </span>
+          <%= @article.get_downvotes.size %>
+      <% end %>
     </div>
   </div>
-</div>
+  </div>
+ 
 <%= render partial: 'nav_footer/footer' %>

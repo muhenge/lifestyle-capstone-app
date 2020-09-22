@@ -215,3 +215,10 @@ footer {
   box-shadow: transparent;
   cursor: pointer;
 }
+/* Show article */
+
+.vote,
+.contact {
+  position: sticky;
+  top: 50%;
+}
