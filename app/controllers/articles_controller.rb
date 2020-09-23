@@ -4,8 +4,7 @@ class ArticlesController < ApplicationController
   before_action :current_user, only: %i[index upvote downvote new create]
 
   def index
-    @articles = Article.all.ordered_by_most_recent
-    @categories = Category.all.priority
+    @articles = Article.all.ordered_by_most_recent.limit(8)
   end
 
   def show; end

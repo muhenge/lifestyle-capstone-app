@@ -8,20 +8,11 @@
               <span class="card-title"><%= link_to article.title.capitalize, article_path(article),class:"links" %></span>
             </div>
             <div class="card-action">
-              <%= link_to vote_article_path(article), method: :put do %>
-                <span class="material-icons">thumb_up</span>
-                <%= article.get_upvotes.size %>
-              <% end %>
-
-              <%= link_to not_vote_article_path(article), method: :put do %>
-                <span class="material-icons">
-                thumb_down
-                </span>
-                <%= article.get_downvotes.size %>
-              <% end %>
               <div class="row">
                 <div class="col s12 m6 l6">
-                  Author: <%= article.user.username.capitalize %>
+                  Author: <%= link_to current_user.username, user_path(current_user) %>
+                </div>
+                <div class="col s12 m6 l6">
                 </div>
               </div>
             </div>

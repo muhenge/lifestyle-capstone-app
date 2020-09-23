@@ -4,7 +4,7 @@
       <%= link_to 'LifeBlog', home_index_path, class:'brand-logo flow-text' %>
       <ul id="nav-mobile" class="center-ul hide-on-med-and-down">
           <li><%= link_to "Home", home_index_path, class: 'login' %></li>
-          <li><%= link_to "Read Articles | Vote", articles_path, class: 'login' %></li>
+          <li><%= link_to "Recent articles", articles_path, class: 'login' %></li>
           <li><%= link_to "Write your article", new_article_path, class: 'login' %></li>
       </ul>
       <% if user_signed_in? %>
