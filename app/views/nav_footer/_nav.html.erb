@@ -10,8 +10,8 @@
       <% if user_signed_in? %>
 
         <div class="logout">
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'login'  %>          
-          <span class="#f57c00-text flow-text badge"><%= current_user.username %></span>
+        <%= link_to "Sign Out", destroy_user_session_path, :method => "delete", class:"login"%>           
+        <span class="#f57c00-text flow-text badge"><%= current_user.username %></span>
         </div>
         <% else %>
         <div class="in-out">

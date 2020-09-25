@@ -1,7 +1,8 @@
 //= require materialize
 //= require jquery2
-//= require jquery
 //= require materialize-sprockets
+//= require jquery
+//= require jquery_ujs
 
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');

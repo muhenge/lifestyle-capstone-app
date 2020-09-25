@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'home/private'
   devise_for :users do
+    delete "/users/:id/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
     member do
       get :articles
     end
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
   get 'users/:authorid/articles' => 'users#articles', :as => :user_articles
   get '/users/:id' => 'users#show', :as => :user
   resources :users
-  delete 'users/sign_out', to: 'devise#sessions'
+  # delete 'users/sign_out', to: 'devise#sessions'
   get '/articles/:id/vote' => 'articles#upvote'
   # get '/no_user_articles', to:'articles#no_user_articles'
   # get '/no_user_categories', to:'categories#no_user_categories'

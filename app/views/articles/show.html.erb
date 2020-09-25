@@ -1,18 +1,18 @@
   <%= render partial: 'nav_footer/nav' %>
-  <div class="container">
+    <div class="container">
     <div class="row">
-    <div class="col sm12 m1 l1 contact left-align">
+    <div class="col  hide-on-med-and-down m1 l1 contact">
       <%= link_to current_user.username, user_path(current_user) %>
     </div>
-     <div class="col sm12 m10 l10">
+     <div class="col s12 m10 l10">
        <div class="title">
-        <h1> <%= @article.title.capitalize %> </h1>
+        <h1><%= @article.title.capitalize %></h1>
       </div>
       <div class="text">
-        <article class="flow-text"><%= @article.text%></article>
+        <article class="flow-text"><%= simple_format(@article.text)%></article>
       </div>
     </div>
-     <div class="col sm12 m1 l1 vote right-align">
+     <div class="col s12 m1 l1 vote">
       <%= link_to vote_article_path(@article), method: :put do %>
           <span class="medium material-icons">thumb_up</span>
           <%= @article.get_upvotes.size %>
@@ -26,6 +26,5 @@
       <% end %>
     </div>
   </div>
-  </div>
-
+  <div>
 <%= render partial: 'nav_footer/footer' %>
