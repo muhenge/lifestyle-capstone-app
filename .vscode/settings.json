@@ -1,0 +1,6 @@
+{
+    "ruby.rubocop.useBundler": true,
+    "ruby.rubocop.suppressRubocopWarnings": true,
+    "ruby.rubocop.executePath": "/home/henzy/.rbenv/shims/rubocop/",
+    "ruby.rubocop.configFilePath": "/home/henzy/.rbenv/shims/rubocop/rubocop.yml"
+}
