@@ -1,30 +1,32 @@
   <%= render partial: 'nav_footer/nav' %>
-    <div class="container">
-    <div class="row">
-    <div class="col  hide-on-med-and-down m1 l1 contact">
-      <%= link_to current_user.username, user_path(current_user) %>
-    </div>
-     <div class="col s12 m10 l10">
-       <div class="title">
-        <h1><%= @article.title.capitalize %></h1>
-      </div>
-      <div class="text">
-        <article class="flow-text"><%= simple_format(@article.text)%></article>
-      </div>
-    </div>
-     <div class="col s12 m1 l1 vote">
-      <%= link_to vote_article_path(@article), method: :put do %>
-          <span class="medium material-icons">thumb_up</span>
-          <%= @article.get_upvotes.size %>
-      <% end %>
 
-      <%= link_to not_vote_article_path(@article), method: :put do %>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 l11 m11">
+          <div class="title">
+            <h1><%= @article.title.capitalize %></h1>
+          </div>
+          <div class="text">
+            <article class="flow-text"><%= simple_format(@article.text)%></article>
+          </div>
+        </div>
+        <div class="col s12 l1 m1 contact">
+            <%= link_to current_user.username, user_path(current_user) %>
+        </div>
+          <div class="col s12 l1 m1 vote">
+          <%= link_to vote_article_path(@article), method: :put do %>
+            <span class="medium material-icons">thumb_up</span>
+            <%= @article.get_upvotes.size %>
+          <% end %>
+
+          <%= link_to not_vote_article_path(@article), method: :put do %>
           <span class="medium material-icons">
               thumb_down
           </span>
-          <%= @article.get_downvotes.size %>
-      <% end %>
+            <%= @article.get_downvotes.size %>
+          <% end %>
+        </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div>
 <%= render partial: 'nav_footer/footer' %>
