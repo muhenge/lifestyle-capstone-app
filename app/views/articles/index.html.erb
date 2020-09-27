@@ -1,16 +1,16 @@
     <%= render partial: 'nav_footer/nav' %>
     <div class="row">
       <% @articles.each do |article| %>
-
-        <div class="col s12 m6 l3">
+         <%= link_to article_path(article), :action => 'go' do %>
+          <div class="col s12 m6 l3">
           <div class="card small" style="background-image: url('<%= rails_blob_url(article.image) if article.image.attached? %>');">
             <div class="card-content white-text">
-              <span class="card-title"><%= link_to article.title.capitalize, article_path(article),class:"links" %></span>
+              <span class="card-title"><%= article.title.capitalize %></span>
             </div>
             <div class="card-action">
               <div class="row">
                 <div class="col s12 m6 l6">
-                Author: <%= link_to article.user.username, user_path(current_user) %>
+                <strong><%= article.user.username.capitalize %></strong>
                 </div>
                 <div class="col s12 m6 l6">
                   
@@ -19,7 +19,9 @@
             </div>
           </div>
         </div>
-
+        
+        <% end %>
+        
       <% end %>
     </div>
     <%= render partial: 'nav_footer/footer' %>
