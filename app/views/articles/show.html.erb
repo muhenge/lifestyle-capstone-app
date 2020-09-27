@@ -10,10 +10,8 @@
             <article class="flow-text"><%= simple_format(@article.text)%></article>
           </div>
         </div>
-        <div class="col s12 l1 m12 contact">
+        <div class="col s12 l1 m12 side">
             <%= link_to @article.user.username, user_path(@user) %>
-        </div>
-        <div class="col s12 l1 m12 vote">
             <%= link_to vote_article_path(@article), method: :put do %>
               <span class="medium material-icons">thumb_up</span>
               <%= @article.get_upvotes.size %>
@@ -26,7 +24,10 @@
               <%= @article.get_downvotes.size %>
             <% end %>
 
+         
+            
         </div>
+
       </div>
     </div>
 <%= render partial: 'nav_footer/footer' %>

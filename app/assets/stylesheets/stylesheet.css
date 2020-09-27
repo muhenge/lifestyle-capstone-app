@@ -221,9 +221,12 @@ footer {
   font-weight: bolder;
 }
 
-.vote,
-.contact {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 20%;
+.side {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 15%;
+  display: flex;
+  flex-flow: column;
+  align-content: space-evenly;
+  align-items: center;
 }
