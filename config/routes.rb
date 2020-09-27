@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   root to: "home#index"
   # get 'home/index'
   get 'users/:user_id/articles' => 'users#articles', :as => :user_articles
-  get '/users/:id' => 'users#show', :as => :user
-  # resources :users
+  # get '/users/:id' => 'users#show', :as => :user
+  resources :users
   # delete 'users/sign_out', to: 'devise#sessions'
   get '/articles/:id/vote' => 'articles#upvote'
   # get '/no_user_articles', to:'articles#no_user_articles'
@@ -21,11 +21,11 @@ Rails.application.routes.draw do
 
   # delete 'sessions/logout', to: 'sessions#destroy', as: :destroy_session
 
-  resources :articles do
-    collection do
-      get 'no_user_articles'
-    end
-  end
+  # resources :articles do
+  #   collection do
+  #     get 'no_user_articles'
+  #   end
+  # end
   resources :articles do
     member do
       put 'vote' => 'articles#upvote'

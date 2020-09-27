@@ -1,10 +1,7 @@
 module UsersHelper
 
-    def user_params
-        params.require(:user).permit(:username, :email, :profile_image)
-    end
 
-    def set_user
-        @user = User.find(params[:id]) or not_found
+    def not_found
+        raise ActionController::RoutingError, 'Not Found'
     end
 end

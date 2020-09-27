@@ -1,13 +1,14 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
   before_action :set_article, only: %i[show edit update destroy upvote downvote]
-  #before_action :current_user, only: %i[index upvote downvote new create]
 
   def index
     @articles = Article.all.ordered_by_most_recent.limit(8)
   end
 
-  def show; end
+  def show
+    @user = User.find(params[:id])
+  end
 
   def edit; end
 
