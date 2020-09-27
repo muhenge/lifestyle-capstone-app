@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
   before_action :set_article, only: %i[show edit update destroy upvote downvote]
-
+  before_action :authenticate_user!, only: %i[upvote downvote create new]
   def index
     @articles = Article.all.ordered_by_most_recent.limit(8)
   end
