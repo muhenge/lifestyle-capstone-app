@@ -59,8 +59,8 @@ nav.navibar .nav-class {
 }
 
 
-.card, 
-.card-image, 
+.card,
+.card-image,
 img {
   object-fit: cover !important;
 }
@@ -229,4 +229,27 @@ footer {
   flex-flow: column;
   align-content: space-evenly;
   align-items: center;
+}
+
+input {
+  border-bottom: 1px solid #fa6000 !important;
+}
+
+input:hover {
+  border-bottom: 2px solid #fa6000 !important;
+}
+
+input:focus {
+  border-bottom: 2px solid #fa6000 !important;
+  box-shadow: none!important;
+}
+
+.textarea {
+  border: none !important;
+}
+
+.form form {
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75); 
 }
