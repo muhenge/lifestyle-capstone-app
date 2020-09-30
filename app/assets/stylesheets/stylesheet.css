@@ -22,9 +22,15 @@ ul.center-ul {
   padding-left: 450px;
 }
 
-form {
-  margin-top: 100px;
-  padding: 75px 100px;
+.text form {
+  margin-top: 50px;
+  padding-left: 35px;
+}
+
+.fixed-form form-group {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 35px;
 }
 
 input {
@@ -244,12 +250,32 @@ input:focus {
   box-shadow: none!important;
 }
 
-.textarea {
+textarea {
   border: none !important;
+}
+
+#article_image {
+  border: none !important;
+  box-shadow: none!important;
+}
+
+textarea:focus {
+  border: none !important;
+  box-shadow: none!important;
 }
 
 .form form {
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75); 
+}
+
+::placeholder {
+  color: #4e443f;
+  opacity: 1;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #4e443f;
+  opacity: 1; 
 }

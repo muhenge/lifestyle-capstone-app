@@ -1,19 +1,22 @@
 <%= render partial: 'nav_footer/nav' %>
 
-<div class="container">
   <div class="row">
+  <div class="col m12 l9 s12 text">
     <%= form_for @article do |a| %>
         <p class="red-text text-darken-2"><%= title_error(@article) %></p>
-      <%= a.text_field :title, placeholder:"title"%><br>
+      <%= a.text_field :title, placeholder:"Title"%><br>
         <p class="red-text text-darken-2"><%= text_error(@article) %></p>
-      <%= a.text_area :text, placeholder:"body", class:"materialize-textarea"%><br>
-      <%= a.file_field :image, placeholder:"Add an image", class:""%><br><br>
-      <div class="form-group">
+      <%= a.text_area :text, placeholder:"Start writting", class:"materialize-textarea"%><br>
+  </div>
+  <div class="col m12 l3 s12 fixed-form">
+    <div class="form-group">
           <p class="red-text text-darken-2"><%= cat_error(@article) %></p>
           <%= a.collection_select(:category_id, Category.all, :id, :name, :prompt => 'Select') %>
       </div><br><br>
+            <%= a.file_field :image, placeholder:"Add an image",class:"insert-img"%><br><br>
+
           <%= a.submit class:"btnn" %>
-    <% end %><br>
   </div>
+    <% end %>
   </div>
-  <%= render partial: 'nav_footer/footer' %>
+<%= render partial: 'nav_footer/footer' %>
