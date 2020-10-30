@@ -9,10 +9,9 @@
       <% if user_signed_in? %>
 
         <div class="logout">
-          <%=  link_to "Edit profile", edit_user_registration_path(@current_user),  class: 'login' %>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"login"%>           
-        <span class="#f57c00-text flow-text badge"><%= current_user.username %></span>
-        </div>
+        <span class="nav-links"><%= link_to "Logout", destroy_user_session_path, method: :delete, class:"login"%></span>
+        <span class="nav-links"><%=  link_to "Edit profile", edit_user_registration_path(@current_user),  class: 'login' %></span>
+        <span class="nav-links"><%= image_tag(current_user.avatar,:class => "user-img responsive-img", alt: "user image") if current_user.avatar.attached?%></span>
         <% else %>
         <div class="in-out">
           <%=  link_to "Login | Register", user_session_path,  class: 'login' %>

@@ -11,7 +11,8 @@
           </div>
         </div>
         <div class="col s12 l1 m12 side">
-          <%= image_tag(@user.avatar) if @user.avatar.attached? %>
+          <%= image_tag(@user.avatar,:class => "user-img responsive-img", alt: "user image") if @user.avatar.attached?%>
+
             <%= link_to vote_article_path(@article), method: :put do %>
               <span class="medium material-icons">thumb_up</span>
               <%= @article.get_upvotes.size %>

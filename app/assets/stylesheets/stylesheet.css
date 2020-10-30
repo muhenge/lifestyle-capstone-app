@@ -86,10 +86,15 @@ img {
   width: 200px;
 }
 
-/* .card-content {
-  position: relative;
-  top: 155px;
-} */
+img.user-img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px !important;
+}
+
+.nav-links {
+  align-self: flex-start;
+}
 
 .carte {
   margin: 35px 0 35px 0;
@@ -170,6 +175,16 @@ a.links {
 .logout,
 .in-out {
   float: right;
+}
+
+.logout {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 35vh;
+  height: inherit;
+  margin: 5px
 }
 
 .flash {
