@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
+  include UsersHelper
+  before_action :set_user, only: [:show]
   before_action :set_article, only: %i[show edit update destroy upvote downvote]
   before_action :authenticate_user!, only: %i[upvote downvote create new]
   def index
@@ -7,7 +9,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    user_artiicle = @article.user
   end
 
   def edit; end
