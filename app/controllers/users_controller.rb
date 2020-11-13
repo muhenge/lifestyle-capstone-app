@@ -1,14 +1,13 @@
 class UsersController < ApplicationController
     include UsersHelper
-
+    before_action :set_user, only: %i[show user_articles]
     def index
     end
     
+    def show; end
 
-    def show
-        (@user = User.find(params[:id])) or not_found
+    def user_articles
+        user_art = @user.articles
     end
-
-    def articles; end
 
 end
