@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    user_artiicle = @article.user
+    user_article = @article.user
   end
 
   def edit; end
