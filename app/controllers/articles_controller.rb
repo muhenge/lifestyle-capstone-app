@@ -8,9 +8,7 @@ class ArticlesController < ApplicationController
     @articles = Article.all.ordered_by_most_recent.limit(8)
   end
 
-  def show
-    user_article = @article.user
-  end
+  def show; end
 
   def edit; end
 

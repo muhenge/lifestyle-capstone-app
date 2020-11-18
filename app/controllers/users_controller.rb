@@ -4,10 +4,10 @@ class UsersController < ApplicationController
     def index
     end
     
-    def show; end
-
-    def user_articles
-        user_art = @user.articles
+    def show
+        @user_art = @user.articles
     end
 
+    def user_articles
+    end
 end
