@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   root to: "home#index"
   # get 'home/index'
   get 'users/:user_id/user_articles' => 'users#user_articles', :as => :user_articles
-  get '/users/:id' => 'users#show', :as => :user
+  # get '/users/:id' => 'users#show', :as => :user
   resources :users
   # delete 'users/sign_out', to: 'devise#sessions'
   get '/articles/:id/vote' => 'articles#upvote'

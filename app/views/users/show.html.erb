@@ -1,3 +1,5 @@
 <%= image_tag(@user.avatar, :class => "user-img responsive-img", alt: "user image") if @user.avatar.attached?%>
 <h1><%= @user.username %></h1>
-<%= link_to "See articles", user_articles_path(@user_art) %>
+<% @user_art.each do |a| %>
+    <%= a.title %>
+<% end %>
