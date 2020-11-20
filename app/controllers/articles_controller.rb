@@ -1,16 +1,22 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
   include UsersHelper
-  before_action :set_user, only: [:show]
+  before_action :set_user, only:%i[show]
+
   before_action :set_article, only: %i[show edit update destroy upvote downvote]
   before_action :authenticate_user!, only: %i[upvote downvote create new]
+  
   def index
     @articles = Article.all.ordered_by_most_recent.limit(8)
   end
 
-  def show; end
+  def show
+    @user_arts = @article.user
+  end
 
-  def edit; end
+  def edit
+
+  end
 
   def update
     @article.update(article_params)
@@ -21,7 +27,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.build
     @categories = Category.all
   end
-
+  
   def create
     @article = current_user.articles.build(article_params)
     if @article.save
