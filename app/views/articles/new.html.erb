@@ -13,6 +13,7 @@
           <p class="red-text text-darken-2"><%= cat_error(@article) %></p>
           <%= a.collection_select(:category_id, Category.all, :id, :name, :prompt => 'Select') %>
       </div><br><br>
+            <%= a.label :image, "Insert article's image" %>
             <%= a.file_field :image, placeholder:"Add an image",class:"insert-img"%><br><br>
 
           <%= a.submit class:"btnn" %>

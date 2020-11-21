@@ -38,6 +38,7 @@ gem 'gravatar_image_tag', '~> 1.2'
 # gem 'azure-storage-blob'
 
 gem "azure-storage-blob", require: false
+gem "aws-sdk-s3", require: false
 
 
 # Reduces boot times through caching; required in config/boot.rb
