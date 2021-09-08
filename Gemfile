@@ -24,7 +24,7 @@ gem 'jquery-rails'
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'better_errors', '~> 2.7', '>= 2.7.1'
+gem 'better_errors', '~> 2.8'
 gem 'materialize-sass', '~> 1.0'
 gem 'sassc-rails', '>= 2.1.0'
 # gem 'simple_form', '~> 5.0', '>= 5.0.2'
